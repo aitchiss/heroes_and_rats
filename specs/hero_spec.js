@@ -2,6 +2,7 @@ var assert = require ('assert')
 var Hero = require('../hero.js')
 var Food = require('../food.js')
 var Task = require('../task.js')
+var Rat = require('../rat.js')
 
 describe('hero tests', function(){
 
@@ -82,6 +83,14 @@ describe('hero tests', function(){
     hero.addTask(task3)
     hero.sortTasksByReward()
     assert.deepEqual([task3, task2, task1], hero.tasks)
+  })
+
+  it('can lose health by eating contaminated banana', function(){
+    var food = new Food('banana', 7)
+    var rat = new Rat()
+    rat.touchFood(food)
+    hero.eat(food)
+    assert.strictEqual(93, hero.health)
   })
 
 

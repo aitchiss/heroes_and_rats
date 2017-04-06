@@ -12,7 +12,9 @@ Hero.prototype = {
 
   eat: function(food){
     var multiplier = 1
-    if (food.name === this.favouriteFood){
+    if (food.isContaminated){
+      multiplier = -1
+    } else if (food.name === this.favouriteFood){
       multiplier = 1.5
     }
     this.health += food.nourishmentFactor * multiplier

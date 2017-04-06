@@ -34,6 +34,12 @@ Hero.prototype = {
     })
   },
 
+  sortTasksByReward: function () {
+    this.tasks.sort(function(a, b) {
+      return a.reward - b.reward
+    })
+  },
+
 }
 
 

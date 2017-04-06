@@ -73,5 +73,16 @@ describe('hero tests', function(){
     assert.deepEqual([task3, task2, task1], hero.tasks)
   })
 
+  it('can sort tasks by reward', function () {
+    var task1 = new Task("task1", 5, 5, 10)
+    var task2 = new Task("task2", 5, 5, 5)
+    var task3 = new Task("task3", 5, 5, 1)
+    hero.addTask(task1)
+    hero.addTask(task2)
+    hero.addTask(task3)
+    hero.sortTasksByReward()
+    assert.deepEqual([task3, task2, task1], hero.tasks)
+  })
+
 
 })

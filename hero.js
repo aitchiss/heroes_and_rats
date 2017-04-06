@@ -8,6 +8,10 @@ var Hero = function(name, favouriteFood){
 Hero.prototype = {
   talk: function(){
     return 'Hello - I\'m ' + this.name + '!'
+  },
+
+  eat: function(food){
+    this.health += food.nourishmentFactor
   }
 }
 

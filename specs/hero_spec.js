@@ -1,5 +1,6 @@
 var assert = require ('assert')
 var Hero = require('../hero.js')
+var Food = require('../food.js')
 
 describe('hero tests', function(){
 
@@ -23,6 +24,12 @@ describe('hero tests', function(){
 
   it('starts with empty task array', function(){
     assert.deepEqual([], hero.tasks)
+  })
+
+  it('can eat food and increase health', function(){
+    var food = new Food('banana', 7)
+    hero.eat(food)
+    assert.strictEqual(107, hero.health)
   })
 
 

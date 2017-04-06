@@ -3,7 +3,7 @@ var Hero = require('../hero.js')
 
 describe('hero tests', function(){
 
-  var hero = new Hero('Irene')
+  var hero = new Hero('Irene', 'schnitzel')
 
   it('has a name', function(){
     assert.strictEqual('Irene', hero.name)
@@ -11,6 +11,10 @@ describe('hero tests', function(){
 
   it('has an initial health value of 100', function(){
     assert.strictEqual(100, hero.health)
+  })
+
+  it('has a favourite food', function(){
+    assert.strictEqual('schnitzel', hero.favouriteFood)
   })
 
 

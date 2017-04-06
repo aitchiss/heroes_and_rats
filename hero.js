@@ -11,7 +11,11 @@ Hero.prototype = {
   },
 
   eat: function(food){
-    this.health += food.nourishmentFactor
+    if (food.name === this.favouriteFood){
+      this.health += (1.5 * food.nourishmentFactor)
+    } else {
+      this.health += food.nourishmentFactor
+    }
   }
 }
 

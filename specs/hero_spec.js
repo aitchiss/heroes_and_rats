@@ -4,7 +4,13 @@ var Food = require('../food.js')
 
 describe('hero tests', function(){
 
-  var hero = new Hero('Irene', 'schnitzel')
+  var hero
+
+  beforeEach(function(){
+    hero = new Hero('Irene', 'schnitzel')
+  })
+
+  
 
   it('has a name', function(){
     assert.strictEqual('Irene', hero.name)
@@ -30,6 +36,12 @@ describe('hero tests', function(){
     var food = new Food('banana', 7)
     hero.eat(food)
     assert.strictEqual(107, hero.health)
+  })
+
+  it('can eat fave food, get 1.5 value', function(){
+    var food = new Food('schnitzel', 16)
+    hero.eat(food)
+    assert.strictEqual(124, hero.health)
   })
 
 

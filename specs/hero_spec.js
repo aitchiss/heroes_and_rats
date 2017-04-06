@@ -1,6 +1,7 @@
 var assert = require ('assert')
 var Hero = require('../hero.js')
 var Food = require('../food.js')
+var Task = require('../task.js')
 
 describe('hero tests', function(){
 
@@ -42,6 +43,12 @@ describe('hero tests', function(){
     var food = new Food('schnitzel', 16)
     hero.eat(food)
     assert.strictEqual(124, hero.health)
+  })
+
+  it('can add a task', function(){
+    var task = new Task("save the world", 10, 9, 2000)
+    hero.addTask(task)
+    assert.strictEqual(1, hero.tasks.length)
   })
 
 

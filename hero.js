@@ -15,9 +15,11 @@ Hero.prototype = {
     if (food.name === this.favouriteFood){
       multiplier = 1.5
     }
-    
     this.health += food.nourishmentFactor * multiplier
-    
+  },
+
+  addTask: function(task){
+    this.tasks.push(task)
   }
 }
 

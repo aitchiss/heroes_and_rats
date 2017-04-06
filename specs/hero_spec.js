@@ -21,5 +21,9 @@ describe('hero tests', function(){
     assert.strictEqual('Hello - I\'m Irene!', hero.talk())
   })
 
+  it('starts with empty task array', function(){
+    assert.deepEqual([], hero.tasks)
+  })
+
 
 })

@@ -58,7 +58,19 @@ describe('hero tests', function(){
     hero.addTask(task1)
     hero.addTask(task2)
     hero.addTask(task3)
-    assert.deepEqual([task3, task2, task1], hero.tasksByDifficulty())
+    hero.sortTasksByDifficulty()
+    assert.deepEqual([task3, task2, task1], hero.tasks)
+  })
+
+  it('can sort tasks by urgency', function () {
+    var task1 = new Task("task1", 5, 10, 5)
+    var task2 = new Task("task2", 5, 5, 5)
+    var task3 = new Task("task3", 5, 1, 5)
+    hero.addTask(task1)
+    hero.addTask(task2)
+    hero.addTask(task3)
+    hero.sortTasksByUrgency()
+    assert.deepEqual([task3, task2, task1], hero.tasks)
   })
 
 

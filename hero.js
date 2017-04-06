@@ -22,14 +22,18 @@ Hero.prototype = {
     this.tasks.push(task)
   },
 
-  tasksByDifficulty: function () {
-
+  sortTasksByDifficulty: function () {
     this.tasks.sort(function(a, b) {
       return a.difficulty - b.difficulty
     })
-    return this.tasks
+  },
 
-  }
+  sortTasksByUrgency: function () {
+    this.tasks.sort(function(a, b) {
+      return a.urgency - b.urgency
+    })
+  },
+
 }
 
 

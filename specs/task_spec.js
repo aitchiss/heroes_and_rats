@@ -21,5 +21,9 @@ describe('task tests', function(){
     assert.strictEqual(3, task.urgency)
   })
 
+  it('starts with completed status of false', function() {
+    assert.ok(!this.completed)
+  })
+
 
 })

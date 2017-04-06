@@ -1,3 +1,5 @@
+var equal = require('deep-equal')
+
 var Hero = function(name, favouriteFood){
   this.name = name
   this.health = 100
@@ -14,7 +16,7 @@ Hero.prototype = {
     var multiplier = 1
     if (food.isContaminated){
       multiplier = -1
-    } else if (food.name === this.favouriteFood){
+    } else if ( equal(food, this.favouriteFood)){
       multiplier = 1.5
     }
     this.health += food.nourishmentFactor * multiplier

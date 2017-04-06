@@ -7,9 +7,11 @@ var Rat = require('../rat.js')
 describe('hero tests', function(){
 
   var hero
+  var favFood
 
   beforeEach(function(){
-    hero = new Hero('Irene', 'schnitzel')
+    favFood = new Food('schnitzel', 16)
+    hero = new Hero('Irene', favFood)
   })
 
   
@@ -23,7 +25,7 @@ describe('hero tests', function(){
   })
 
   it('has a favourite food', function(){
-    assert.strictEqual('schnitzel', hero.favouriteFood)
+    assert.strictEqual(favFood, hero.favouriteFood)
   })
 
   it('can talk and say its name', function(){

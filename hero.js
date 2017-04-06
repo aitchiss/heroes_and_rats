@@ -4,5 +4,11 @@ var Hero = function(name, favouriteFood){
   this.favouriteFood = favouriteFood
 }
 
+Hero.prototype = {
+  talk: function(){
+    return 'Hello - I\'m ' + this.name + '!'
+  }
+}
+
 
 module.exports = Hero

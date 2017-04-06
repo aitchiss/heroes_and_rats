@@ -13,6 +13,10 @@ describe('food tests', function(){
     assert.strictEqual(7, food.nourishmentFactor)
   })
 
+  it('starts uncontaminated', function(){
+    assert.strictEqual(false, food.isContaminated)
+  })
+
   
 
 

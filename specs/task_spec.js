@@ -22,7 +22,12 @@ describe('task tests', function(){
   })
 
   it('starts with completed status of false', function() {
-    assert.ok(!this.completed)
+    assert.ok(!task.completed)
+  })
+
+  it('can be marked completed', function() {
+    task.markCompleted()
+    assert.ok(task.completed)
   })
 
 

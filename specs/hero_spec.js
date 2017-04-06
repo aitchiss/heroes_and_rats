@@ -9,5 +9,9 @@ describe('hero tests', function(){
     assert.strictEqual('Irene', hero.name)
   })
 
+  it('has an initial health value of 100', function(){
+    assert.strictEqual(100, hero.health)
+  })
+
 
 })

@@ -3,7 +3,7 @@ var Task = require('../task.js')
 
 describe('task tests', function(){
 
-  var task = new Task("get the shopping in", 4, 10)
+  var task = new Task("get the shopping in", 4, 3, 10)
 
   it('has a description', function() {
     assert.strictEqual('get the shopping in', task.description)
@@ -15,6 +15,10 @@ describe('task tests', function(){
 
   it('has a reward value', function(){
     assert.strictEqual(10, task.reward)
+  })
+
+  it('has an urgency level', function(){
+    assert.strictEqual(3, task.urgency)
   })
 
 
